@@ -11,7 +11,7 @@ from phy import IPlugin
 
 class RawDataFilterPlugin(IPlugin):
     def attach_to_controller(self, controller):
-        b, a = butter(3, 150.0 / controller.model.sample_rate * 2.0, 'high')
+        b, a = butter(3, [500.0 / controller.model.sample_rate * 2.0, 6000 / controller.model.sample_rate *2.0], 'bandpass')
 
         @controller.raw_data_filter.add_filter
         def high_pass(arr, axis=0):
