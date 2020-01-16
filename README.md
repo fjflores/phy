@@ -19,7 +19,7 @@
 
 ## User installation instructions
 
-[**Click here to see the installation instructions.**](https://phy.readthedocs.io/en/latest/installation/)
+If you are isntalling from the original repo, [**click here to see the installation instructions.**](https://phy.readthedocs.io/en/latest/installation/). Otherwise, my particular installations instructions are as follow:
 
 
 ## Developer installation instructions
