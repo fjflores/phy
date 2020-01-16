@@ -21,17 +21,41 @@
 
 If you are isntalling from the original repo, [**click here to see the installation instructions.**](https://phy.readthedocs.io/en/latest/installation/). Otherwise, my particular installations instructions are as follow:
 
+```bash
+conda create -n myPhy2 python pip numpy matplotlib scipy h5py pyqt cython -y
+conda activate phy2
+pip install colorcet 
+pip install pyopengl 
+pip install qtconsole 
+pip install requests 
+pip install traitlets 
+pip install tqdm 
+pip install joblib 
+pip install click 
+pip install mkdocs
+```
 
-## Developer installation instructions
+(for some reason, in Windows seems to be better to install each reqire separately)
 
-Use these instructions if you're a **developer** who wants to contribute to phy. Assuming you have a scientific Python distribution like Anaconda with the most important dependencies installed (NumPy, SciPy, matplotlib, IPython, PyQt5...), do **in a fresh environment** (and NOT in an environment that already has phy 1.x installed):
+Now, to install Phy proper, you have two options:
+
+If installing from the remote repo:
 
 ```bash
-git clone -b dev https://github.com/cortex-lab/phy.git
-cd phy
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+pip install git+https://github.com/fjflores/phy.git@dev
+```
+
+or if installing from the local repo:
+
+```bash
+cd path-to-phy/phy
 pip install -e .
+```
+
+and finally, install the [Phylib](https://github.com/fjflores/phylib) library
+
+```bash
+pip install git+https://github.com/fjflores/phylib.git
 ```
 
 ## Credits
